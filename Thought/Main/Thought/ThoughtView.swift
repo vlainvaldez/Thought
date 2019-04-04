@@ -24,6 +24,7 @@ public final class ThoughtView: UIView {
         super.init(frame: frame)
         
         self.backgroundColor = UIColor.lightGray
+        
         self.subviews(forAutoLayout: [
             self.textLabel
         ])
@@ -39,7 +40,7 @@ public final class ThoughtView: UIView {
     }
 }
 
-// MARK: Public APIs
+// MARK: - Public APIs
 extension ThoughtView {    
     public func fadeOut(duration: Int) {
         self.animate([
@@ -53,11 +54,26 @@ extension ThoughtView {
         ])
     }
     
-    public func setMessage(_ text: String) {
+    public func setMessage(_ text: String, color: UIColor = UIColor.gray) {
         self.textLabel.text = text
+        self.textLabel.textColor = color
+    }
+    
+    public func setRadius(radius: CGFloat? = nil) {
+        self.layer.cornerRadius = radius ?? self.frame.width / 2
+    }
+    
+    public func withShadow() {        
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 3, height: 3)
+        self.layer.shadowOpacity = 0.6
+        self.layer.shadowRadius = 5.0
+        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+        self.layer.shouldRasterize = true
     }
 }
 
+// MARK: - Helper Methods
 extension ThoughtView {
     private func animate(_ animations: [ThoughtAnimation]) {
         // Exit condition: once all animations have been performed, we can return

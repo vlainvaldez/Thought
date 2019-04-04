@@ -14,6 +14,8 @@ public class MainView: UIView {
     // MARK: Subviews
     public let toolTip: ThoughtView = {
         let view: ThoughtView = ThoughtView()
+        view.setMessage("Au Revoir", color: UIColor.white)
+        view.setRadius(radius: 9)
         return view
     }()
     
@@ -38,12 +40,14 @@ public class MainView: UIView {
             make.width.equalTo(300.0)
         }
         
-        self.toolTip.hide(after: 5)
+        
+//        self.toolTip.hide(after: 5)
     }
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-
+        
+        self.toolTip.withShadow()
     }
     
     public required init?(coder aDecoder: NSCoder) {
