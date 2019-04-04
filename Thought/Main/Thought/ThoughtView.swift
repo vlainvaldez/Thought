@@ -65,9 +65,9 @@ extension ThoughtView {
     
     public func withShadow() {        
         self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOffset = CGSize(width: 3, height: 3)
+        self.layer.shadowOffset = CGSize(width: 0, height: 4)
         self.layer.shadowOpacity = 0.6
-        self.layer.shadowRadius = 5.0
+        self.layer.shadowRadius = 4.0
         self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
         self.layer.shouldRasterize = true
     }

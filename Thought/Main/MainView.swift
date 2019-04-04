@@ -41,7 +41,7 @@ public class MainView: UIView {
         }
         
         
-//        self.toolTip.hide(after: 5)
+        self.toolTip.hide(after: 5)
     }
     
     public override func layoutSubviews() {
