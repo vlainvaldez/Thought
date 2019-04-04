@@ -9,7 +9,14 @@
 import UIKit
 
 public class MainView: UIView {
-
+    
+    // MARK: Subviews
+    
+    // MARK: Stored Properties
+    
+    // MARK: Computed Properties
+    
+    // MARK: Initializer
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -19,5 +26,14 @@ public class MainView: UIView {
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+// MARK: - Target Action Methods
+extension MainView {
+    
+}
+
+// MARK: - Helper Methods
+extension MainView {
     
 }

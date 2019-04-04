@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainVC.swift
 //  Thought
 //
 //  Created by Novare Account on 04/04/2019.
@@ -9,6 +9,8 @@
 import UIKit
 
 public final class MainVC: UIViewController {
+    
+    // MARK: Delegates Declarations
     
     // MARK: Initializer
     public init() {
@@ -29,10 +31,38 @@ public final class MainVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    // MARK: Instance Methods
+    
+    // MARK: Stored Properties
+    
+    // MARK: Computed Properties
 }
 
 // MARK: - Views
 extension MainVC {
     private var rootView: MainView { return self.view as! MainView }
 }
+
+// MARK: - Target Action Methods
+extension MainVC {
+    
+}
+
+// MARK: - Helper Methods
+extension MainVC {
+
+}
+
+
+// MARK: - SampleDelegate Methods
+extension MainVC {
+    
+}
+
+// MARK: - SampleDataSource Methods
+extension MainVC {
+    
+}
+
 
