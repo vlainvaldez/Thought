@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import SnapKit
 
 public class MainView: UIView {
     
     // MARK: Subviews
+    public let toolTip: ThoughtView = {
+        let view: ThoughtView = ThoughtView()
+        return view
+    }()
     
     // MARK: Stored Properties
     
@@ -21,6 +26,23 @@ public class MainView: UIView {
         super.init(frame: frame)
         
         self.backgroundColor = UIColor.white
+        
+        self.subviews(forAutoLayout: [
+            self.toolTip
+        ])
+        
+        self.toolTip.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.centerY.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.height.equalTo(60.0)
+            make.width.equalTo(300.0)
+        }
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.toolTip.fadeOut(duration: 3)
     }
     
     public required init?(coder aDecoder: NSCoder) {
