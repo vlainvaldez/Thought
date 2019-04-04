@@ -10,6 +10,7 @@ import UIKit
 
 public final class MainVC: UIViewController {
     
+    // MARK: Initializer
     public init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -18,11 +19,20 @@ public final class MainVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: LifeCycle Methods    
+    public override func loadView() {
+        super.loadView()
+        self.view = MainView()
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+}
 
-
+// MARK: - Views
+extension MainVC {
+    private var rootView: MainView { return self.view as! MainView }
 }
 
