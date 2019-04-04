@@ -46,6 +46,16 @@ extension ThoughtView {
             .fadeOut(duration: TimeInterval(duration))
         ])
     }
+    
+    public func hide(after: Int) {
+        self.animate([
+            .hideAfter(duration: TimeInterval(after))            
+        ])
+    }
+    
+    public func setMessage(_ text: String) {
+        self.textLabel.text = text
+    }
 }
 
 extension ThoughtView {

@@ -37,12 +37,13 @@ public class MainView: UIView {
             make.height.equalTo(60.0)
             make.width.equalTo(300.0)
         }
+        
+        self.toolTip.hide(after: 5)
     }
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-        
-        self.toolTip.fadeOut(duration: 3)
+
     }
     
     public required init?(coder aDecoder: NSCoder) {

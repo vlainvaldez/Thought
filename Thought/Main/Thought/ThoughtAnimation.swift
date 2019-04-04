@@ -22,6 +22,14 @@ public extension ThoughtAnimation {
         return ThoughtAnimation(duration: duration, closure: { $0.alpha = 0 })
     }
     
+    static func hideAfter(duration: TimeInterval = 0.3) -> ThoughtAnimation {
+        return ThoughtAnimation(duration: duration) { (view: UIView) in
+            Timer.scheduledTimer(withTimeInterval: duration, repeats: true) { timer in
+                view.isHidden = true
+            }
+        }
+    }
+    
     static func resize(to size: CGSize, duration: TimeInterval = 0.3) -> ThoughtAnimation {
         return ThoughtAnimation(duration: duration, closure: { $0.bounds.size = size })
     }
