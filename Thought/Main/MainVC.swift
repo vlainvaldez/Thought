@@ -30,6 +30,8 @@ public final class MainVC: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.rootView.toolTip.delegate = self
     }
     
     // MARK: Instance Methods
@@ -61,8 +63,8 @@ extension MainVC {
 }
 
 // MARK: - SampleDataSource Methods
-extension MainVC {
-    
+extension MainVC: ThouthViewDelegate {
+    public func thoughtDidClose(view: ThoughtView) {
+        print("close")
+    }
 }
-
-

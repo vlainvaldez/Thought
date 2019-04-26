@@ -14,8 +14,10 @@ public class MainView: UIView {
     // MARK: Subviews
     public let toolTip: ThoughtView = {
         let view: ThoughtView = ThoughtView()
-        view.setMessage("Au Revoir", color: UIColor.white)
+        view.setMessage("Au Revoir, Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne ", color: UIColor.black.withAlphaComponent(0.7))
         view.setRadius(radius: 9)
+        view.backgroundColor = UIColor.white
+        view.withClose(accesory: #imageLiteral(resourceName: "close-icon"), size: 20.0)
         return view
     }()
     
@@ -39,9 +41,6 @@ public class MainView: UIView {
             make.height.equalTo(60.0)
             make.width.equalTo(300.0)
         }
-        
-        
-        self.toolTip.hide(after: 5)
     }
     
     public override func layoutSubviews() {

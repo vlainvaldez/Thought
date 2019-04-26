@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811099222272FCA1005A46BB /* ThoughtViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811099212272FCA1005A46BB /* ThoughtViewDelegate.swift */; };
 		81E09ADC22559D5600904D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09ADB22559D5600904D6F /* AppDelegate.swift */; };
 		81E09ADE22559D5600904D6F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09ADD22559D5600904D6F /* MainVC.swift */; };
 		81E09AE322559D5700904D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E09AE222559D5700904D6F /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		1560F2EF32B9BC6D24F0A989 /* Pods-ThoughtTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThoughtTests.debug.xcconfig"; path = "Target Support Files/Pods-ThoughtTests/Pods-ThoughtTests.debug.xcconfig"; sourceTree = "<group>"; };
 		74BD0410538A1EFDD841FDC1 /* Pods_Thought.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thought.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		763D977EA1C6B3F0B2D91251 /* Pods-Thought.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thought.release.xcconfig"; path = "Target Support Files/Pods-Thought/Pods-Thought.release.xcconfig"; sourceTree = "<group>"; };
+		811099212272FCA1005A46BB /* ThoughtViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtViewDelegate.swift; sourceTree = "<group>"; };
 		81E09AD822559D5600904D6F /* Thought.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thought.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E09ADB22559D5600904D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E09ADD22559D5600904D6F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		811099202272FC8A005A46BB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				811099212272FCA1005A46BB /* ThoughtViewDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		81E09ACF22559D5500904D6F = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +203,7 @@
 		81E09B122255B75E00904D6F /* Thought */ = {
 			isa = PBXGroup;
 			children = (
+				811099202272FC8A005A46BB /* Protocols */,
 				81E09B132255B78700904D6F /* ThoughtView.swift */,
 				81E09B152255C17400904D6F /* ThoughtAnimation.swift */,
 			);
@@ -448,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E09ADE22559D5600904D6F /* MainVC.swift in Sources */,
+				811099222272FCA1005A46BB /* ThoughtViewDelegate.swift in Sources */,
 				81E09B0D22559FBB00904D6F /* MainView.swift in Sources */,
 				81E09B162255C17400904D6F /* ThoughtAnimation.swift in Sources */,
 				81E09B112255A3FC00904D6F /* UIViewExtension.swift in Sources */,
