@@ -14,7 +14,6 @@ public class MainView: UIView {
     // MARK: Subviews
     public let toolTip: ThoughtView = {
         let view: ThoughtView = ThoughtView()
-        view.setMessage("Au Revoir, Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne ", color: UIColor.black.withAlphaComponent(0.7))
         view.setRadius(radius: 9)
         view.backgroundColor = UIColor.white
         view.withClose(accesory: #imageLiteral(resourceName: "close-icon"), size: 20.0)
@@ -22,7 +21,7 @@ public class MainView: UIView {
     }()
     
     // MARK: Stored Properties
-    
+    private var toolTipHeight: Constraint!
     // MARK: Computed Properties
     
     // MARK: Initializer
@@ -38,7 +37,7 @@ public class MainView: UIView {
         self.toolTip.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.centerY.equalToSuperview()
             make.centerX.equalToSuperview()
-            make.height.equalTo(60.0)
+            self.toolTipHeight = make.height.equalTo(60.0).constraint
             make.width.equalTo(300.0)
         }
     }
@@ -47,6 +46,17 @@ public class MainView: UIView {
         super.layoutSubviews()
         
         self.toolTip.withShadow()
+        
+        let message: String = "Au Revoir, Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne "
+        
+        self.toolTip.setMessage(message, color: UIColor.black.withAlphaComponent(0.4))
+        
+        let height: CGFloat = message.height(
+            withConstrainedWidth: 300.0,
+            font: UIFont.systemFont(ofSize: 14.0, weight: UIFont.Weight.semibold)
+        )
+        
+        self.toolTipHeight.update(offset: height + 20)
     }
     
     public required init?(coder aDecoder: NSCoder) {
