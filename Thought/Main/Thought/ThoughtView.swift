@@ -14,7 +14,7 @@ public final class ThoughtView: UIView {
     public weak var delegate: ThouthViewDelegate?
     
     // MARK: SubViews
-    public let textLabel: UILabel = {
+    public lazy var textLabel: UILabel = {
         let view: UILabel = UILabel()
         view.text = "Sample text"
         view.font = UIFont.systemFont(ofSize: 14.0, weight: UIFont.Weight.semibold)
@@ -67,6 +67,8 @@ public final class ThoughtView: UIView {
         super.layoutSubviews()
         
         self.closeImageButton.layer.cornerRadius = self.closeImageButton.frame.width / 2
+        
+        layoutIfNeeded()
     }
 }
 
@@ -99,7 +101,7 @@ extension ThoughtView {
         self.layer.shadowOpacity = 0.6
         self.layer.shadowRadius = 4.0
         self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
-        self.layer.shouldRasterize = true
+        self.layer.shouldRasterize = false
     }
     
     public func withClose() {
