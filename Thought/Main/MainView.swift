@@ -49,7 +49,7 @@ public class MainView: UIView {
         
         let message: String = "Au Revoir, Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne  Chienne "
         
-        self.toolTip.setMessage(message, color: UIColor.black.withAlphaComponent(0.4))
+        self.toolTip.setMessage(message, color: UIColor.black)
         
         let height: CGFloat = message.height(
             withConstrainedWidth: 300.0,
