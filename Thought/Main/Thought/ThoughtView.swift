@@ -77,9 +77,6 @@ public final class ThoughtView: UIView {
         layoutIfNeeded()
     }
     
-    public override func draw(_ rect: CGRect) {
-        // This needs to be here to allow interaction outside button bounds.
-    }
 }
 
 // MARK: - Public APIs
